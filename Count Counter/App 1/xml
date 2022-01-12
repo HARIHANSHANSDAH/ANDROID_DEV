@@ -1,36 +1,60 @@
-package com.example.courtcounter;
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:padding="4dp"
+        android:textSize="20sp"
+        android:text="@string/team_a" />
 
-public class MainActivity extends AppCompatActivity {
-    int scoreTeamA = 0;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
+    <TextView
+        android:id="@+id/team_a_score"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="4dp"
+        android:textSize="11sp"
+        android:gravity="center_horizontal"
+         android:text="@string/_0"/>
 
-    public void addThreeForTeamA(View view){
-        scoreTeamA += 3;
-        displayForTeamA(scoreTeamA);
-    }
-    public void addTwoForTeamA(View view){
-        scoreTeamA += 2;
-        displayForTeamA(scoreTeamA);
-    }
-    public void addOneForTeamA(View view){
-       scoreTeamA += 1;
-        displayForTeamA(scoreTeamA);
-    }
-    public void Reset(View view){
-        scoreTeamA = 0;
-        displayForTeamA(scoreTeamA);
-    }
-    public void displayForTeamA(int score){
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
-        scoreView.setText(String.valueOf(score));
-    }
-}
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="4dp"
+        android:onClick="addThreeForTeamA"
+        android:text="@string/_3_points" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="4dp"
+        android:onClick="addTwoForTeamA"
+        android:text="@string/_1_points" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="4dp"
+        android:onClick="addOneForTeamA"
+        android:text="@string/free_points" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:padding="4dp"
+        android:onClick="Reset"
+        android:text="@string/reset" />
+
+</LinearLayout>
