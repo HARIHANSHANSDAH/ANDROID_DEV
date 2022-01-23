@@ -1,1 +1,125 @@
-a
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="horizontal">
+<LinearLayout
+    android:layout_weight="1"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:padding="4dp"
+        android:textSize="20sp"
+        android:text="@string/team_a" />
+
+    <TextView
+        android:id="@+id/team_a_score"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="4dp"
+        android:textSize="11sp"
+        android:gravity="center_horizontal"
+         android:text="@string/_0"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="4dp"
+        android:onClick="addThreeForTeamA"
+        android:text="@string/_3_points" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="4dp"
+        android:onClick="addTwoForTeamA"
+        android:text="@string/_1_points" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="4dp"
+        android:onClick="addOneForTeamA"
+        android:text="@string/free_points" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:padding="4dp"
+        android:onClick="Reset"
+        android:text="@string/reset" />
+</LinearLayout>
+
+<LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:padding="4dp"
+        android:text="@string/team_b"
+        android:textSize="20sp" />
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:id="@+id/team_b_score"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:padding="4dp"
+        android:text="@string/_0"
+        android:textSize="11sp" />
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:onClick="addThreeForTeamB"
+        android:padding="4dp"
+        android:text="@string/_3_points" />
+
+    <Button
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:onClick="addTwoForTeamB"
+    android:padding="4dp"
+    android:text="@string/_1_points" />
+
+<Button
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:onClick="addOneForTeamB"
+    android:padding="4dp"
+    android:text="@string/free_points" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:padding="4dp"
+        android:onClick="ResetB"
+        android:text="@string/reset" />
+
+</LinearLayout>
+</LinearLayout>
+
