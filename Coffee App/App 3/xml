@@ -24,7 +24,6 @@
         <Button
             android:layout_width="48dp"
             android:layout_height="48dp"
-
             android:onClick="subt"
             android:text="@string/sub" />
         <TextView
